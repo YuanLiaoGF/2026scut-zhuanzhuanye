@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026年本科生自主转专业 · 学院流向图</title>
+<title>2026年华工本科生自主转专业</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#F7F9FB;color:#2B3440;font-family:"Microsoft YaHei","PingFang SC",system-ui,-apple-system,sans-serif}
@@ -90,8 +90,37 @@ h4{font-size:12px;margin:0 0 10px;color:#6B7684;font-weight:600}
 .rnote{font-size:11px;color:#A8B0BA;margin:10px 0 0;line-height:1.7}
 @media(max-width:900px){.rbody{grid-template-columns:1fr}}
 
+
+.acard{margin-bottom:18px}
+.ahead{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.atitle{font-size:15px;font-weight:500;margin:0;flex:none}
+.asel{font-size:13px;padding:7px 10px;border:1px solid #D9E0E8;border-radius:8px;background:#fff;color:#2B3440;min-width:190px;cursor:pointer;font-family:inherit}
+.asel:focus{outline:none;border-color:#35618F}
+.ahint{font-size:11.5px;color:#98A2AE}
+.akpis{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.akpi{background:#F7F9FB;border-radius:8px;padding:9px 14px;min-width:118px}
+.akpi b{display:block;font-size:20px;line-height:1.25;font-variant-numeric:tabular-nums;color:#1F2A37}
+.akpi b.txt{font-size:13px;padding-top:5px;line-height:1.5;color:#35618F}
+.akpi span{font-size:11.5px;color:#7A8592}
+.abody{display:grid;grid-template-columns:250px 1fr;gap:18px}
+.aside h4,.amain h4{font-size:12.5px;margin:0 0 9px;font-weight:500;color:#6B7684}
+.aitem{display:flex;justify-content:space-between;gap:8px;padding:6px 9px;font-size:12px;border-radius:6px;cursor:pointer;color:#4A5563}
+.aitem:hover{background:#F0F4F8}
+.aitem.on{background:#E8EFF6;color:#1F3A5F;font-weight:500}
+.aitem i{font-style:normal;font-variant-numeric:tabular-nums;color:#8A94A0;white-space:nowrap}
+.aitem em{font-style:normal;color:#C8414F;font-size:11px;margin-left:4px}
+.arec{background:#fff;border:0.5px solid #E4E9EF;border-radius:10px;padding:13px 15px;margin-bottom:11px}
+.arec:last-child{margin-bottom:0}
+.atop{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:9px;padding-bottom:9px;border-bottom:0.5px solid #EDF1F5}
+.abadge{font-size:12px;font-weight:500;color:#1F3A5F}
+.aown{font-size:10.5px;padding:2px 8px;border-radius:20px;background:#FBEDEE;color:#C8414F}
+.aclause{font-size:12.5px;line-height:1.8;color:#3A4450;white-space:pre-line}
+.asource{font-size:11.5px;color:#7A8592;background:#F7F9FB;border-radius:6px;padding:8px 11px;margin-top:12px}
+.anote{font-size:11px;color:#A8B0BA;margin:10px 0 0;line-height:1.8}
+@media(max-width:900px){.abody{grid-template-columns:1fr}}
+
 </style></head><body><div class="wrap">
-<h1>2026 年本科生自主转专业 · 学院流向图</h1>
+<h1>2026年 华工本科生自主转专业</h1>
 <p class="sub">左侧为转出学院，右侧为转入学院；带宽 = 流动人数。颜色按学院「净流入」编码，暖色为净流入、冷色为净流出。悬停可查看明细。</p>
 <div class="kpis">
 <div class="kpi"><b>496</b><span>转专业学生</span></div>
@@ -362,6 +391,21 @@ h4{font-size:12px;margin:0 0 10px;color:#6B7684;font-weight:600}
 <p class="rnote" id="rNote"></p>
 </div>
 
+<div class="card acard" id="assessCard">
+<div class="ahead">
+<h3 class="atitle">考核选拔内容查询</h3>
+<select class="asel" id="aCollege"></select>
+<select class="asel" id="aMajor"></select>
+<span class="ahint">选择学院与专业，查看选拔考核形式、考核内容与录取原则；也可以点击上方桑基图的学院节点同步切换</span>
+</div>
+<div class="akpis" id="aKpis"></div>
+<div class="abody">
+<div class="aside"><h4>该学院各专业 · 计划名额</h4><div id="aList"></div></div>
+<div class="amain"><h4 id="aMainTitle">考核选拔内容</h4><div id="aResult"></div></div>
+</div>
+<p class="anote" id="aNote"></p>
+</div>
+
 <div class="card"><h3>学院净流入 / 净流出排行</h3><div class="rankcols">
 <div><h4>净流入 TOP 10</h4><div class="barrow"><span class="bname">电力学院</span><div class="btrack"><div class="bfill pos" style="width:100.0%"></div></div><span class="bval" style="color:#C8414F">+133</span></div><div class="barrow"><span class="bname">电子与信息学院</span><div class="btrack"><div class="bfill pos" style="width:29.3%"></div></div><span class="bval" style="color:#C8414F">+39</span></div><div class="barrow"><span class="bname">材料科学与工程学院</span><div class="btrack"><div class="bfill pos" style="width:26.3%"></div></div><span class="bval" style="color:#C8414F">+35</span></div><div class="barrow"><span class="bname">软件学院</span><div class="btrack"><div class="bfill pos" style="width:26.3%"></div></div><span class="bval" style="color:#C8414F">+35</span></div><div class="barrow"><span class="bname">自动化科学与工程学院</span><div class="btrack"><div class="bfill pos" style="width:18.8%"></div></div><span class="bval" style="color:#C8414F">+25</span></div><div class="barrow"><span class="bname">机械与汽车工程学院</span><div class="btrack"><div class="bfill pos" style="width:16.5%"></div></div><span class="bval" style="color:#C8414F">+22</span></div><div class="barrow"><span class="bname">法学院</span><div class="btrack"><div class="bfill pos" style="width:14.3%"></div></div><span class="bval" style="color:#C8414F">+19</span></div><div class="barrow"><span class="bname">物理与光电学院</span><div class="btrack"><div class="bfill pos" style="width:13.5%"></div></div><span class="bval" style="color:#C8414F">+18</span></div><div class="barrow"><span class="bname">未来技术学院</span><div class="btrack"><div class="bfill pos" style="width:10.5%"></div></div><span class="bval" style="color:#C8414F">+14</span></div><div class="barrow"><span class="bname">吴贤铭智能工程学院</span><div class="btrack"><div class="bfill pos" style="width:6.8%"></div></div><span class="bval" style="color:#C8414F">+9</span></div></div>
 <div><h4>净流出 TOP 10</h4><div class="barrow"><span class="bname">土木与交通学院</span><div class="btrack"><div class="bfill neg" style="width:58.6%"></div></div><span class="bval" style="color:#35618F">-78</span></div><div class="barrow"><span class="bname">化学与化工学院</span><div class="btrack"><div class="bfill neg" style="width:39.8%"></div></div><span class="bval" style="color:#35618F">-53</span></div><div class="barrow"><span class="bname">生物科学与工程学院</span><div class="btrack"><div class="bfill neg" style="width:30.8%"></div></div><span class="bval" style="color:#35618F">-41</span></div><div class="barrow"><span class="bname">建筑学院</span><div class="btrack"><div class="bfill neg" style="width:29.3%"></div></div><span class="bval" style="color:#35618F">-39</span></div><div class="barrow"><span class="bname">食品科学与工程学院</span><div class="btrack"><div class="bfill neg" style="width:20.3%"></div></div><span class="bval" style="color:#35618F">-27</span></div><div class="barrow"><span class="bname">公共管理学院</span><div class="btrack"><div class="bfill neg" style="width:15.8%"></div></div><span class="bval" style="color:#35618F">-21</span></div><div class="barrow"><span class="bname">设计学院</span><div class="btrack"><div class="bfill neg" style="width:13.5%"></div></div><span class="bval" style="color:#35618F">-18</span></div><div class="barrow"><span class="bname">环境与能源学院</span><div class="btrack"><div class="bfill neg" style="width:10.5%"></div></div><span class="bval" style="color:#35618F">-14</span></div><div class="barrow"><span class="bname">新闻与传播学院</span><div class="btrack"><div class="bfill neg" style="width:9.0%"></div></div><span class="bval" style="color:#35618F">-12</span></div><div class="barrow"><span class="bname">电子商务系</span><div class="btrack"><div class="bfill neg" style="width:9.0%"></div></div><span class="bval" style="color:#35618F">-12</span></div></div>
@@ -498,6 +542,56 @@ const RULES = [{"college":"机械与汽车工程学院","grade":"2025","major":"
   ms.addEventListener('change',render);
   list.addEventListener('click',function(e){var t=e.target.closest('[data-m]');if(!t)return;ms.value=t.dataset.m;render();});
   cs.value='电力学院';fillMajors('电力学院');ms.value='电气工程及其自动化';render();
+})();
+
+
+const ASSESS = {"电力学院":{"form":"面试（个人陈述 + 现场提问）","source":"电力学院.pdf 第 5–6 页「四、选拔考核」","note":"该学院按转入专业分别规定个人陈述时长，选择专业后会自动显示对应条款。","majors":[{"n":"电气工程及其自动化","q":34},{"n":"能源与动力工程","q":100}],"blocks":[{"t":"选拔考核形式","c":"学院组织转专业面试专家小组，对符合接收条件的申请转专业学生根据不同的年级分别进行综合评价；综合评价形式为个人陈述和现场提问相结合，综合评价满分为 100 分。","m":null},{"t":"选拔考核程序 · 转入电气工程及其自动化","c":"学生个人陈述 5 分钟 PPT，内容主要包括个人学业基本情况、大一期间参与的科研项目情况或工程实践项目情况、今后的学业设想、个人的突出潜质、爱好及特长等。主要考核学生对申请专业的认知、创新思维、对公共基础课程的掌握程度、完成学业的能力、将来从事本专业的意愿和志向、心理素质、家国情怀情况等。\n评委根据学生的面试表现进行评分，综合评价成绩取平均分。","m":["电气工程及其自动化"]},{"t":"选拔考核程序 · 转入能源与动力工程","c":"学生个人陈述 2–3 分钟，内容主要包括个人学业基本情况、大一期间参与的科研项目情况或工程实践项目情况、今后的学业设想、个人的突出潜质、爱好及特长等。主要考核学生对申请专业的认知、创新思维、对公共基础课程的掌握程度、完成学业的能力、将来从事本专业的意愿和志向、心理素质、家国情怀情况等。\n评委根据学生的面试表现进行评分，综合评价成绩取平均分。","m":["能源与动力工程"]},{"t":"选拔考核录取原则","c":"根据不同年级学生的综合评价分数分别由高到低排名决定录取名单。综合评价成绩不合格（低于 60 分）者，不予录取。综合评价成绩相同情况下，已修必修课程百分制平均学分绩点高者优先录取。","m":null}]},"机械与汽车工程学院":{"form":"面试（5 分钟 PPT 个人陈述 + 现场提问）","source":"机械与汽车工程学院.pdf 第 2–3 页「四、选拔考核」","note":"安全工程专业的接收与考核另行通知，不在本方案内。","majors":[{"n":"机械工程","q":25},{"n":"机械电子工程","q":19},{"n":"智能车辆工程","q":20},{"n":"安全工程","q":0},{"n":"过程装备与控制工程","q":1}],"blocks":[{"t":"选拔考核形式","c":"学院组织转专业面试专家小组，对审批通过的申请转专业学生进行综合评价，综合评价形式为个人陈述和现场提问相结合。其中个人陈述时间为 5 分钟，采用 PPT 讲述形式。","m":null},{"t":"选拔考核内容","c":"个人陈述内容主要包括个人及家庭基本情况、学业基本情况、申请转专业的理由及对申请专业的理解、今后的学业设想、个人的突出潜质、爱好及特长等。\n主要考核学生对申请专业的认知、创新思维、对公共基础课程的掌握程度、完成学业的能力、将来从事本专业的意愿和志向、心理素质情况等。","m":null},{"t":"选拔考核录取原则","c":"录取名单根据综合评价成绩分年级由高到低排名决定，综合评价满分为 100 分。综合评价成绩不合格（低于 60 分）者，不予录取。综合评价成绩相同情况下，百分制加权平均分绩点高者排名占先。","m":null},{"t":"安全工程专业备注","c":"安全工程专业接收详见本科生院主页《关于招收 2025 级本科生转入机械与汽车工程学院安全工程专业的通知》，其考核安排不在本方案内。","m":["安全工程"]}]},"自动化科学与工程学院":{"form":"笔试（考试大纲）","source":"自动化科学与工程学院.docx《自动化专业转专业考试大纲(2026)》","note":"该学院提供的是笔试考试大纲，未包含面试形式与录取原则。","majors":[{"n":"自动化","q":13},{"n":"智能科学与技术","q":7},{"n":"低空技术与工程","q":5},{"n":"自动化(“自动化+工商管理”双学士学位项目)","q":2}],"blocks":[{"t":"考试内容与分值占比","c":"软件编程基础 60%（C/C++ 40% + Python 20%）；计算机硬件基础 20%；自动化、AI 与低空前沿领域 20%。","m":null},{"t":"第一部分 软件编程基础 · 模块 1 C/C++ 编程基础","c":"（1）编译型与解释型语言：定义、区别、典型代表；C/C++（编译型）、Python（解释型）执行流程；编译、链接、运行基本过程。\n（2）变量与数据类型：int、float、double、char、bool、void；常量、变量定义与命名规则；运算符与表达式。\n（3）程序结构与流程控制：顺序、分支（if/else、switch）、循环（for、while、do-while）；break、continue、return 用法。\n（4）函数：定义、声明、调用、参数传递（值传递、地址传递）；返回值、形参/实参、库函数与自定义函数。\n（5）指针：概念、定义与取值；指针与变量、数组关系；空指针基本概念。\n（6）类与面向对象基础：类的定义、成员变量/成员函数；对象实例化；访问权限（public/private）基本概念。","m":null},{"t":"第一部分 软件编程基础 · 模块 2 Python 基础内容","c":"（1）环境与语法：解释器、注释、缩进、输入输出（print/input）。\n（2）变量与类型：int/str/float/list、类型转换、基本运算。\n（3）基础结构：条件判断（if-elif-else）、循环（for/while）。\n（4）简单函数：def 定义、参数、返回值。","m":null},{"t":"第二部分 计算机硬件基础","c":"（1）计算机基本概念：计算机组成（运算器、控制器、存储器、输入/输出设备）；硬件/软件/系统层次。\n（2）CPU 与内存：CPU 功能、核心、主频、指令执行；内存（RAM）作用、地址空间、存储单位（Byte/KB/MB/GB）。\n（3）计算机体系结构：冯·诺依曼结构；总线结构、指令周期、存储程序原理。","m":null},{"t":"第三部分 自动化、AI 与低空前沿领域","c":"（1）自动化基础概念：自动控制、反馈、闭环/开环系统；自动化在工业/机器人/无人机中的应用。\n（2）人工智能基本概念：AI、机器学习、深度学习区别；数据、模型、训练、推理基本含义。\n（3）前沿技术理解：具身智能（机器人通过感知-决策-执行与环境交互）；低空智能感知（无人机、低空网络、目标检测、避障、通信定位）；行业认知（自动化 + AI + 低空经济、无人机、低空交通的交叉应用）。","m":null}]},"物理与光电学院":{"form":"2024 级仅面试；2025 级笔试（大学物理）+ 面试","source":"物理与光电学院.docx「选拔考核」","note":"该学院按报名年级分别规定考核形式与综合成绩算法。","majors":[{"n":"应用物理学","q":17},{"n":"光电信息科学与工程","q":7}],"blocks":[{"t":"2024 级 · 选拔考核形式与录取原则","c":"不安排笔试考试，只安排面试（符合报名条件的同学均可参加面试），不参加面试的同学不予考虑在录取名单内。\n综合成绩由面试构成，满分 100 分；综合成绩总分相同情况下，数学类成绩平均分高者排名占先。","m":null},{"t":"2025 级 · 选拔考核形式与内容","c":"选拔考核形式为笔试、面试；根据笔试成绩按计划招生人数 1.2 倍比例进入面试。\n笔试科目为大学物理（力学、振动波动、光的干涉），面试考查物理学方面的知识。","m":null},{"t":"2025 级 · 选拔考核录取原则","c":"综合成绩由笔试和面试成绩两部分构成，满分 100 分，计算方法 = 笔试 × 0.5 + 面试成绩 × 0.5；综合成绩总分相同情况下，笔试成绩高者排名占先。","m":null},{"t":"通用录取要求","c":"分年级排序，择优录取。面试成绩不合格（低于 60 分）者，不予录取。","m":null}]},"电子与信息学院":{"form":"笔试（大学物理 + 数学）+ 面试","source":"电子与信息学院.txt「四、选拔考核」","note":"","majors":[{"n":"信息工程","q":35},{"n":"电子科学与技术","q":5},{"n":"信息工程中法菁英班","q":20}],"blocks":[{"t":"选拔考核形式","c":"笔试、面试。转专业学生考核的综合成绩由各院（系）根据实际情况结合面试（笔试）成绩等进行计算，综合成绩满分为 100 分。","m":null},{"t":"笔试内容与入围规则","c":"笔试内容为《大学物理（一）》（力学、振动波动，光学（光的干涉））40 分，《微积分 II》（含（一）全部及（二）第 7–8 章）和《线性代数与解析几何》（线性代数部分）60 分，满分 100 分。\n笔试单科线为分年级当科平均分 × 0.7；至少一门未达单科线不能入围面试，两科均达单科线的候选者按笔试总分由高到低确定入围名单。","m":null},{"t":"面试内容","c":"面试分专业分年级进行考核，内容为理工科背景知识、学习能力、心理素质等，满分为 100 分。","m":null},{"t":"选拔考核录取原则","c":"综合成绩 = 笔试成绩 × 0.4 + 面试成绩 × 0.6，满分 100 分；综合成绩分年级排序，择优录取。综合成绩总分相同情况下，笔试成绩高者排名占先。面试不及格者，不予录取。","m":null}]},"软件学院":{"form":"两轮选拔：成绩筛选 + 分年级面试","source":"软件学院.txt「四、选拔考核」","note":"","majors":[{"n":"软件工程","q":6},{"n":"软件工程（工业软件）","q":30}],"blocks":[{"t":"第一轮选拔 · 依据与名额","c":"按照指标数 1:1.5 的比例，根据学生第一学期数学和英语成绩进行选拔，选拔通过的学生参与面试。参加面试的总人数为 55 人，其中 2025 级 50 人、2024 级 5 人。","m":null},{"t":"第一轮选拔 · 成绩计算","c":"大一学生：第一学期数学算术平均分 × 70% + 第一学期英语算术平均分 × 30%（取小数点后两位）。\n大二学生：前三学期数学算术平均分 × 70% + 前三学期英语算术平均分 × 30%（取小数点后两位）。\n同分处理：以数学平均分为依据从高到低依次排序；数学平均分亦同分，取英语类必修课程最高分从高到低依次排序确定。\n数学包括数学学院开设的所有数学类必修课程；英语包括外国语学院开设的所有英语类必修课程。","m":null},{"t":"第二轮选拔 · 面试形式与内容","c":"分年级进行面试，面试总分 100 分。考核内容：⑴ 专业课基础（数学及编程基础知识）40%；⑵ 综合素质 40%；⑶ 英语听说能力 20%。\n面试成绩 = 专业课基础 × 40% + 综合素质 × 40% + 英语听说能力 × 20%（取小数点后两位）。","m":null},{"t":"第二轮选拔 · 录取原则","c":"根据考生的面试成绩排序（2024 级和 2025 级分别排序），按照从高到低的顺序进行录取；面试成绩保留 2 位小数，同分时按面试成绩中的专业课基础成绩、综合素质成绩、第一学期英语平均分依次排序确定。\n若选拔考核后 2024 级学生接收人数未满，接收人数可面向 2025 级。面试成绩不合格（低于 60 分）者，不予录取。","m":null}]},"材料科学与工程学院":{"form":"分年级面试（含英语听说 + 8 分钟 PPT 汇报）","source":"材料科学与工程学院.txt「选拔考核」","note":"","majors":[{"n":"高分子材料与工程","q":20},{"n":"材料科学与工程","q":20},{"n":"功能材料","q":15},{"n":"生物材料","q":20}],"blocks":[{"t":"选拔考核形式","c":"分年级进行面试。","m":null},{"t":"选拔考核内容与分值","c":"1. 考察英语听说能力，了解个人兴趣爱好：学生先用英语介绍个人情况，面试老师用英语提问简单问题（5 分钟，10 分）。\n2. 了解学生转专业的动力，对新专业的认识、期待及今后的志向（5–10 分钟，40 分）。\n3. 了解学生数学、物理、化学基础课的学习、掌握情况及在原专业的学习、成绩情况（5–10 分钟，40 分）。\n4. 了解学生对当前时政新闻的关注情况及看法和思想动态（5 分钟，10 分）。\n综合成绩满分为 100 分。","m":null},{"t":"面试组织要求","c":"每位学生的面试时间不少于 15 分钟，请准备 8 分钟的 PPT 汇报，专家组提问 7 分钟（含外语听说能力测试）。","m":null},{"t":"PPT 汇报内容","c":"（1）个人介绍（成长经历：家庭情况，教育从小学至大学）（英语介绍）；\n（2）学习情况（大学期间学习的课程及其成绩，尤其是数学、物理、化学基础课的学习情况）；\n（3）综合素质情况（道德品行、性格的自我评价；业余爱好，参加各种文体活动、社会实践、义务活动等情况）；\n（4）对申请转入专业的认识（选择该专业的理由、自己读该专业的优势和弱势、完成学业后的职业规划等）。","m":null},{"t":"选拔考核录取原则","c":"根据学生面试成绩按年级排序择优录取。如果面试成绩相同，按学生已修必修课程百分制平均学分绩点从高到低录取。面试成绩不合格（低于 60 分）者，不予录取。","m":null}]},"法学院":{"form":"分年级面试","source":"法学院.txt「四、选拔考核」","note":"","majors":[{"n":"法学","q":9},{"n":"知识产权","q":10},{"n":"法学（法律人工智能实验班）","q":0}],"blocks":[{"t":"综合成绩","c":"转专业学生考核的综合成绩由各院（系）根据实际情况结合面试（笔试）成绩等进行计算，综合成绩满分为 100 分。","m":null},{"t":"选拔考核形式与内容","c":"分年级进行面试；考查专业认识、基础知识、心理素质、交流沟通能力和逻辑思维能力等方面。","m":null},{"t":"选拔考核录取原则","c":"成立不少于 5 人的面试专家小组，根据面试成绩分年级按专业从高分到低分录取。如面试成绩相同，则按原专业已修必修课程百分制加权平均分绩点（以教务系统导出为准）高的学生排序优先。综合面试成绩不合格（低于 60 分）者，不予录取。","m":null}]},"计算机科学与工程学院":{"form":"初试（笔试 + 机试）+ 复试面试","source":"计算机科学与工程学院.txt「四、选拔考核」","note":"","majors":[{"n":"计算机科学与技术","q":8},{"n":"信息安全","q":12},{"n":"网络工程","q":2}],"blocks":[{"t":"选拔考核形式","c":"初试为笔试 + 机试，复试为分年级进行面试。","m":null},{"t":"初试 · 笔试","c":"笔试面向学生培养计划中无计算机类公共课而导致无法修课、没有成绩的学生；在满足其他接收条件的前提下，参加学院统一组织的大学计算机基础知识笔试考核，成绩合格则视为报名成功，可继续参加后续环节的考核。如无以上情况则不做笔试安排。","m":null},{"t":"初试 · 机试与复试入围","c":"机试主要考查学生的计算机编程能力（C/C++ 语言），机试成绩满分为 100 分；根据机试成绩由高至低筛选各年级、专业接收指标 1:1.5 人数的学生进入复试。\n若机试成绩相同，则数学类 + 计算机类必修课程首次考核成绩之和高者占先；若筛选学生的人数未达指标 1.5 倍，按实际人数进入面试。","m":null},{"t":"复试 · 面试内容","c":"面试内容为理工科背景知识、学习能力、心理素质等，面试成绩满分为 100 分。","m":null},{"t":"选拔考核录取原则","c":"综合成绩 = 机试成绩 × 0.7 + 面试成绩 × 0.3，满分 100 分；根据综合成绩按年级由高至低进行录取，综合成绩总分相同情况下，机试成绩高者排名占先。面试不及格者，不予录取。\n若选拔考核后各年级、专业接收人数未满，则保持空缺，接收指标不予通用。","m":null}]}};
+(function(){
+  var cs=document.getElementById('aCollege'),ms=document.getElementById('aMajor');
+  var kp=document.getElementById('aKpis'),list=document.getElementById('aList'),res=document.getElementById('aResult');
+  var title=document.getElementById('aMainTitle'),note=document.getElementById('aNote');
+  function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  var colleges=Object.keys(ASSESS);
+  colleges.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;cs.appendChild(o);});
+  function fillMajors(c){
+    ms.innerHTML='';
+    ASSESS[c].majors.forEach(function(x){var o=document.createElement('option');o.value=x.n;o.textContent=x.n;ms.appendChild(o);});
+  }
+  function render(c,m){
+    var A=ASSESS[c];if(!A)return;
+    var blocks=A.blocks.filter(function(b){return !b.m||b.m.indexOf(m)>=0;});
+    var quota=A.majors.reduce(function(a,x){return a+x.q;},0);
+    kp.innerHTML='<div class="akpi"><b class="txt">'+esc(A.form)+'</b><span>选拔考核形式</span></div>'+
+      '<div class="akpi"><b>'+blocks.length+'</b><span>适用考核条款</span></div>'+
+      '<div class="akpi"><b>'+A.majors.length+'</b><span>招生专业数</span></div>'+
+      '<div class="akpi"><b style="color:#C8414F">'+quota+'</b><span>自主转专业计划名额合计</span></div>';
+    list.innerHTML=A.majors.map(function(x){
+      var own=A.blocks.some(function(b){return b.m&&b.m.indexOf(x.n)>=0;});
+      return '<div class="aitem'+(x.n===m?' on':'')+'" data-n="'+esc(x.n)+'" title="'+(own?'该专业有专属考核条款；':'')+'计划名额 '+(x.q||'—')+' 人">'+
+             '<span>'+esc(x.n)+(own?'<em>·专属</em>':'')+'</span><i>'+(x.q?x.q+' 人':'—')+'</i></div>';
+    }).join('');
+    title.textContent='考核选拔内容 · '+c+' / '+m;
+    res.innerHTML=blocks.map(function(b){
+      var own=b.m&&b.m.indexOf(m)>=0;
+      return '<div class="arec"><div class="atop"><span class="abadge">'+esc(b.t)+'</span>'+
+             (own?'<span class="aown">本专业专属</span>':'')+'</div>'+
+             '<div class="aclause">'+esc(b.c)+'</div></div>';
+    }).join('')+
+    '<div class="asource">来源：'+esc(A.source)+(A.note?'　｜　'+esc(A.note):'')+'</div>';
+  }
+  function sync(c){
+    if(!ASSESS[c])return;
+    cs.value=c;fillMajors(c);ms.value=ASSESS[c].majors[0].n;render(c,ms.value);
+  }
+  cs.addEventListener('change',function(){fillMajors(cs.value);ms.value=ASSESS[cs.value].majors[0].n;render(cs.value,ms.value);});
+  ms.addEventListener('change',function(){render(cs.value,ms.value);});
+  list.addEventListener('click',function(e){var t=e.target.closest('[data-n]');if(!t)return;ms.value=t.dataset.n;render(cs.value,ms.value);});
+  document.querySelectorAll('[data-c]').forEach(function(el){
+    if(el.classList.contains('flow'))return;
+    el.addEventListener('click',function(){sync(el.dataset.c);});
+  });
+  note.textContent='数据说明：目前收录 '+colleges.length+' 个主要学院的考核选拔文件（PDF / DOCX / TXT），仅摘取各文件的「选拔考核」「考试大纲」章节，已剔除工作小组与监督小组名单、咨询电话、联系人及选拔时间安排等信息。多数学院考核方案为学院统一，仅电力学院按转入专业区分考核程序、物理与光电学院按报名年级区分，选择专业后会自动过滤适用条款。计划名额来自附件2，仅供对照；具体以各学院官方通知为准。';
+  cs.value='电力学院';fillMajors('电力学院');ms.value='电气工程及其自动化';render('电力学院','电气工程及其自动化');
 })();
 
 </script></body></html>
