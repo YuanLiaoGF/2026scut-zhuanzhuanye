@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026年华工本科生自主转专业</title>
+<title>2026年春季 华工本科生自主转专业</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#F7F9FB;color:#2B3440;font-family:"Microsoft YaHei","PingFang SC",system-ui,-apple-system,sans-serif}
@@ -119,8 +119,36 @@ h4{font-size:12px;margin:0 0 10px;color:#6B7684;font-weight:600}
 .anote{font-size:11px;color:#A8B0BA;margin:10px 0 0;line-height:1.8}
 @media(max-width:900px){.abody{grid-template-columns:1fr}}
 
+
+/* ===== 手机端基础适配（不影响桌面布局） ===== */
+@media(max-width:768px){
+  .wrap{padding:16px 13px 30px}
+  h1{font-size:19px;line-height:1.4}
+  .sub{font-size:12px;line-height:1.6;margin-bottom:14px}
+  .kpis{gap:8px}
+  .kpi{flex:1 1 44%;min-width:0;padding:9px 12px}
+  .kpi b{font-size:19px}
+  .kpi span{font-size:11px}
+  .card{padding:12px 12px 10px;margin-bottom:14px}
+  .legend{gap:10px;font-size:11px}
+  .note{font-size:11px;line-height:1.6}
+  .svg-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border:0.5px solid #E8EDF3;border-radius:8px}
+  #sankey{width:1280px;max-width:none}
+  .qselect,.rsel,.asel{width:100%;min-width:0;min-height:42px}
+  .qhead,.rhead,.ahead{gap:8px}
+  .qtitle,.rtitle,.atitle{width:100%}
+  .qhint,.rhint,.ahint,.rnote,.anote,.qtip{width:100%;font-size:11px;line-height:1.6}
+  .qkpi,.rkpi,.akpi{flex:1 1 44%;min-width:0}
+  .qcols,.rbody,.abody{grid-template-columns:1fr;gap:14px}
+  .qname,.bname{width:38%}
+  .rrec{padding:12px}
+  .read{font-size:12px;padding-left:16px}
+  .foot{font-size:10.5px}
+  #tip{display:none}
+}
+@media(max-width:768px) and (hover:none){.flow{opacity:.5}}
 </style></head><body><div class="wrap">
-<h1>2026年 华工本科生自主转专业</h1>
+<h1>2026年春季 华工本科生自主转专业</h1>
 <p class="sub">左侧为转出学院，右侧为转入学院；带宽 = 流动人数。颜色按学院「净流入」编码，暖色为净流入、冷色为净流出。悬停可查看明细。</p>
 <div class="kpis">
 <div class="kpi"><b>496</b><span>转专业学生</span></div>
@@ -139,7 +167,7 @@ h4{font-size:12px;margin:0 0 10px;color:#6B7684;font-weight:600}
 <span class="lg"><i class="sw" style="background:#35618F"></i>净流出 ≥ 20 人</span>
 </div>
 <p class="note">※ 34 人属于「院内转专业」（转出学院 = 转入学院），不计入学院间连线；节点上的人数为跨学院流动口径。</p>
-<svg id="sankey" viewBox="0 0 1280 607" xmlns="http://www.w3.org/2000/svg">
+<div class="svg-scroll"><svg id="sankey" viewBox="0 0 1280 607" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="1280" height="607" fill="#FFFFFF"/>
 <text class="axis" x="186" y="34" text-anchor="end">转出学院（按转出人数降序）</text>
 <text class="axis" x="1094" y="34" text-anchor="start">转入学院（按转入人数降序）</text>
@@ -360,7 +388,7 @@ h4{font-size:12px;margin:0 0 10px;color:#6B7684;font-weight:600}
 <rect class="node" data-c="生物科学与工程学院" data-o="42" data-i="1" data-n="-41" x="1072" y="525.13" width="12" height="4.00" rx="2" fill="#35618F"><title>生物科学与工程学院 · 转出 42 / 转入 1 / 净 -41</title></rect><text class="clabel" data-c="生物科学与工程学院" data-o="42" data-i="1" data-n="-41" x="1094" y="531.1343283582089" text-anchor="start">生物科学与工程学院 <tspan fill="#98A2AE" font-size="10">1</tspan></text>
 <rect class="node" data-c="轻工科学与工程学院" data-o="5" data-i="1" data-n="-4" x="1072" y="541.13" width="12" height="4.00" rx="2" fill="#7EA6C9"><title>轻工科学与工程学院 · 转出 5 / 转入 1 / 净 -4</title></rect><text class="clabel" data-c="轻工科学与工程学院" data-o="5" data-i="1" data-n="-4" x="1094" y="547.1343283582089" text-anchor="start">轻工科学与工程学院 <tspan fill="#98A2AE" font-size="10">1</tspan></text>
 <rect class="node" data-c="食品科学与工程学院" data-o="28" data-i="1" data-n="-27" x="1072" y="557.13" width="12" height="4.00" rx="2" fill="#35618F"><title>食品科学与工程学院 · 转出 28 / 转入 1 / 净 -27</title></rect><text class="clabel" data-c="食品科学与工程学院" data-o="28" data-i="1" data-n="-27" x="1094" y="563.1343283582089" text-anchor="start">食品科学与工程学院 <tspan fill="#98A2AE" font-size="10">1</tspan></text>
-</g></svg></div>
+</g></svg></div></div>
 <div class="card qcard" id="queryCard">
 <div class="qhead">
 <h3 class="qtitle">学院流向查询</h3>
